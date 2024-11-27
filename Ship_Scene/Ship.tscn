@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://be3io3xs1af1"]
+
+[ext_resource type="Texture2D" uid="uid://dtj6rbvc0l8vq" path="res://assets/PNG_Parts&Spriter_Animation/Ship4/Ship4.png" id="1_x210f"]
+[ext_resource type="Script" path="res://Ship_Scene/space_ship_image.gd" id="2_o5sds"]
+[ext_resource type="Texture2D" uid="uid://b6y15agg1bscp" path="res://assets/PNG_Parts&Spriter_Animation/Ship4/Exhaust/Normal_flight/Exhaust1/exhaust1.png" id="3_30jt1"]
+[ext_resource type="Script" path="res://Ship_Scene/exhaust_ship.gd" id="4_j6jq7"]
+
+[node name="Ship" type="Node2D"]
+
+[node name="SpaceShipImage" type="Sprite2D" parent="."]
+position = Vector2(56, -1)
+scale = Vector2(0.726563, 0.710938)
+texture = ExtResource("1_x210f")
+script = ExtResource("2_o5sds")
+
+[node name="ExhaustShip" type="Sprite2D" parent="SpaceShipImage"]
+position = Vector2(-77.0753, 1.40659)
+scale = Vector2(1.37634, 1.40659)
+texture = ExtResource("3_30jt1")
+script = ExtResource("4_j6jq7")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(92, 0)

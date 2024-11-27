@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://38obpwqip1vp"]
+
+[ext_resource type="PackedScene" uid="uid://dwlnoxlog51vw" path="res://Background/background_scene.tscn" id="1_p5gg7"]
+[ext_resource type="PackedScene" uid="uid://vd835vn0pk4w" path="res://anteparos.tscn" id="3_k54y5"]
+[ext_resource type="PackedScene" uid="uid://b0ej4l374aaiw" path="res://player.tscn" id="3_l02th"]
+
+[node name="Main" type="Node2D"]
+
+[node name="background_scene" parent="." instance=ExtResource("1_p5gg7")]
+
+[node name="Player" parent="background_scene" instance=ExtResource("3_l02th")]
+position = Vector2(168, 283)
+
+[node name="Anteparos" parent="." instance=ExtResource("3_k54y5")]

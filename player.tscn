@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://b0ej4l374aaiw"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_awb6c"]
+[ext_resource type="Texture2D" uid="uid://dtj6rbvc0l8vq" path="res://assets/PNG_Parts&Spriter_Animation/Ship4/Ship4.png" id="2_e7tp0"]
+[ext_resource type="Script" path="res://sprite_2d.gd" id="3_0yps7"]
+[ext_resource type="Texture2D" uid="uid://b6y15agg1bscp" path="res://assets/PNG_Parts&Spriter_Animation/Ship4/Exhaust/Normal_flight/Exhaust1/exhaust1.png" id="3_hanyp"]
+[ext_resource type="Script" path="res://Ship_Scene/exhaust_ship.gd" id="4_ob2pv"]
+[ext_resource type="PackedScene" uid="uid://sfyqjdngjlq2" path="res://bullet.tscn" id="6_o01xi"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_awb6c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4.99999, -1)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_e7tp0")
+script = ExtResource("3_0yps7")
+
+[node name="ExhaustShip" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(-77.0753, 1.40659)
+scale = Vector2(1.37634, 1.40659)
+texture = ExtResource("3_hanyp")
+script = ExtResource("4_ob2pv")
+
+[node name="Marker2D" type="Marker2D" parent="Sprite2D"]
+position = Vector2(50, 2.85714)
+
+[node name="bullet" parent="Sprite2D/Marker2D" instance=ExtResource("6_o01xi")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-10, 15, -19, 15, -26, 10, -32, 13, -39, 12, -39, 3, -39, -12, -32, -12, -28, -10, -24, -12, -28, -15, -25, -19, -15, -16, -5, -15, 4, -15, 11, -15, 20, -8, 27, -7, 30, -1, 30, 7, 26, 11, 15, 11, 11, 13, 5, 14, -1, 14)

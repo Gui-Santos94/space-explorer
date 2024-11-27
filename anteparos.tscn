@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://vd835vn0pk4w"]
+
+[ext_resource type="Script" path="res://anteparos.gd" id="1_l0m8w"]
+[ext_resource type="Texture2D" uid="uid://basvpqpoamtbk" path="res://assets/Alien/Boss.png" id="1_lxhti"]
+
+[node name="Anteparos" type="Area2D"]
+script = ExtResource("1_l0m8w")
+
+[node name="Alien" type="Sprite2D" parent="."]
+position = Vector2(558, 165)
+scale = Vector2(0.49044, 0.492308)
+texture = ExtResource("1_lxhti")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-823, 53)
+polygon = PackedVector2Array(1276, 174, 1253, 163, 1255, 144, 1249, 138, 1252, 74, 1291, 65, 1308, 54, 1326, 55, 1342, 47, 1356, 29, 1376, 45, 1378, 42, 1376, 30, 1407, 16, 1418, 30, 1410, 43, 1446, 54, 1453, 69, 1467, 77, 1501, 81, 1514, 112, 1511, 131, 1502, 146, 1486, 157, 1467, 173, 1461, 185, 1442, 185, 1425, 178, 1404, 173, 1399, 182, 1389, 176, 1368, 174, 1372, 187, 1353, 206, 1341, 203, 1329, 192, 1309, 177, 1317, 158, 1299, 164)
